@@ -12,10 +12,7 @@ const productSchema = new mongoose.Schema(
         type: String,
          required: true 
     },
-      price: { 
-        type: Number, 
-        required: true 
-    },
+    
       stock: { 
         type: Number, 
         required: true, 
@@ -29,8 +26,24 @@ const productSchema = new mongoose.Schema(
         type: [String], 
         required: true 
     }, 
+    priceBDT: { // Price in BDT
+      type: Number,
+  },
+  priceUSD: { // Price in USD
+      type: Number,
+  },
+   defaultCurrency: { 
+      type: String,
+      enum: ['BDT', 'USD'], 
+      default: 'BDT' 
+  },
+    isDeleted:{
+      type: Boolean,
+      default: false,
+      
+    }
     },
     { timestamps: true }
   );
 
-export const Product = model<IProduct>('product', productSchema)
+export const Product = model<IProduct>('Product', productSchema)

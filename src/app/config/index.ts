@@ -14,4 +14,5 @@ export default{
     CLOUADNAME:process.env.CLOUDNAME,
     CLOUADAPI:process.env.CLOUADAPI,
     CLOUADSECRET:process.env.CLOUADSECRET,
+    EXCHANGEAPI:process.env.EXCHANGEAPI,
 }

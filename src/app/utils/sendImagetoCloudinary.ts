@@ -1,15 +1,15 @@
-import { v2 as cloudinary, UploadApiResponse } from "cloudinary";
-import config from "../config";
-import multer from "multer";
+import { UploadApiResponse, v2 as cloudinary } from 'cloudinary';
 import fs from 'fs';
+import multer from 'multer';
+import config from '../config';
+
 
 cloudinary.config({
-  cloud_name: config.CLOUADNAME,
-  api_key: config.CLOUADAPI,
-  api_secret: config.CLOUADSECRET,
+  cloud_name: "dut0oeco5",
+  api_key: "349794822595221",
+  api_secret: "LPXmiYNditIsWWIujremFGtnsrg",
 });
-
-
+console.log(config.CLOUADNAME,config.CLOUADAPI,config.CLOUADSECRET);
 export const sendImageToCloudinary = (
   imageName: string,
   path: string,
@@ -47,4 +47,3 @@ const storage = multer.diskStorage({
 });
 
 export const upload = multer({ storage: storage });
-export default cloudinary;
