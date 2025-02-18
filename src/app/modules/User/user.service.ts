@@ -36,13 +36,16 @@ const createAdminIntoDB =async(payload:IUser)=>{
     const hashpassword = await bcrypt.hash(payload.password,Number(config.SALT))
 
     const newUser = await User.create({
-       ...payload, // Spread the payload to include all fields
-        password: hashpassword, // Override the password with the hashed one
-        role: "admin" // Set the role to admin
+       ...payload, 
+        password: hashpassword, 
+        role: "admin" 
       });
       return newUser
 }
 
+
+
 export const UserService ={
-    createUserIntoDB
+    createUserIntoDB,
+    createAdminIntoDB
 }

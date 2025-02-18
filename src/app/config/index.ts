@@ -11,4 +11,7 @@ export default{
     JWT_TOKEN:process.env.JWT_TOKEN,
     NODE_ENV:process.env.NODE_ENV,
     SALT:process.env.SALT,
+    CLOUADNAME:process.env.CLOUDNAME,
+    CLOUADAPI:process.env.CLOUADAPI,
+    CLOUADSECRET:process.env.CLOUADSECRET,
 }
