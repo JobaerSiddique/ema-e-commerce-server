@@ -15,4 +15,5 @@ export default{
     CLOUADAPI:process.env.CLOUADAPI,
     CLOUADSECRET:process.env.CLOUADSECRET,
     EXCHANGEAPI:process.env.EXCHANGEAPI,
+    SECRETKEY:process.env.SECRETKEY
 }

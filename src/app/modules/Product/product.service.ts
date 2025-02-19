@@ -35,7 +35,7 @@ const addProductsIntoDB = async(data:IProduct,file:string[])=>{
 
 const getAllProductsFromDB = async(query: Record<string, unknown>)=>{
     const ProductModel = new QueryBuilder(
-        Product.find(),query
+        Product.find({isDeleted:false}),query
     )
     .search(ProductSearchableFields)
     .filter()

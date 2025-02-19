@@ -1,6 +1,8 @@
 export const ProductSearchableFields = [
     
     'name',
-    'price',
+    'priceBDT',
+    'priceUSD',
     'category',
+    "defaultCurrency"
   ];
